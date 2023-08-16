@@ -10,7 +10,14 @@ function App() {
   return (
     <div>
       <p>{total}</p>
-      <Button onClick={increment} lenghtButton="1.25rem">Aumentar</Button>
+      <Button 
+        id='main-button'
+        className='btn' 
+        onClick={increment} 
+        lenghtButton="1.25rem"
+      >
+        Aumentar
+      </Button>
     </div>
   )
 }

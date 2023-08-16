@@ -1,14 +1,15 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
 
-type ButtonProps = {
-    lenghtButton?: string;
-    children: ReactNode;
-    onClick?: () => void
-};
-export const Button = (props: ButtonProps) => {
+type ButtonProps = React.ComponentProps<"button"> & {
+    lenghtButton?: string
+}
+export const Button = ({children, lenghtButton, ...props}: ButtonProps) => {
   return (
-    <button onClick={props.onClick} style={{fontSize: props.lenghtButton}}>
-        {props.children}
+    <button 
+        style={{fontSize: lenghtButton}}
+        {...props}
+    >
+        {children}
     </button>
   )
 }
