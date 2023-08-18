@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from './Button';
 import { Input } from './Input';
+import { Checkbox } from './Checkbox';
 
 function App() {
   const [total, setTotal] = React.useState(0)
@@ -22,6 +23,7 @@ function App() {
         onChange={(event) => setData(event.currentTarget.value)}
       />
       <Input id='hour-schedule' label='Hour of schedule' type='time' />
+      <Checkbox label='Accept terms and conditions'/>
       <p>{total}</p>
       <Button
         id='main-button'
@@ -29,7 +31,7 @@ function App() {
         onClick={increment}
         lenghtButton="1.25rem"
       >
-        Aumentar
+        Increase
       </Button>
     </div>
   )
